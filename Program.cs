@@ -11,6 +11,7 @@ namespace ConditionalStatementDeliverable
                 Console.Write("What percent grade do you expect to get in ISM 4300? ");
                 string input = Console.ReadLine();
                 int grade = int.Parse(input);
+                int difference = 0;
 
                 if (grade > 97)
                 {
@@ -27,6 +28,16 @@ namespace ConditionalStatementDeliverable
                 else if (grade > 87)
                 {
                     Console.WriteLine("Your letter grade is: B+");
+                    difference = 90 - grade;
+                    switch (difference)
+                    {
+                        case 1:
+                            Console.WriteLine("You're only 1 point away from the next letter grade!");
+                            break;
+                        case 2:
+                            Console.WriteLine("You're only 2 points away from the next letter grade!");
+                            break;
+                    }
                 }
                 else if (grade > 81)
                 {
@@ -39,10 +50,21 @@ namespace ConditionalStatementDeliverable
                 else if (grade > 77)
                 {
                     Console.WriteLine("Your letter grade is: C+");
+                    difference = 80 - grade;
+                    switch (difference)
+                    {
+                        case 1:
+                            Console.WriteLine("You're only 1 point away from an B-!");
+                            break;
+                        case 2:
+                            Console.WriteLine("You're only 2 points away from an B-!");
+                            break;
+                    }
                 }
                 else if (grade > 71)
                 {
                     Console.WriteLine("Your letter grade is: C");
+                    difference = 78 - grade;
                 }
                 else if (grade > 69)
                 {
@@ -51,6 +73,16 @@ namespace ConditionalStatementDeliverable
                 else if (grade > 67)
                 {
                     Console.WriteLine("Your letter grade is: D+");
+                    difference = 70 - grade;
+                    switch (difference)
+                    {
+                        case 1:
+                            Console.WriteLine("You're only 1 point away from the next letter grade!");
+                            break;
+                        case 2:
+                            Console.WriteLine("You're only 2 points away from the next letter grade!");
+                            break;
+                    }
                 }
                 else if (grade > 61)
                 {
@@ -63,6 +95,8 @@ namespace ConditionalStatementDeliverable
                 else
                 {
                     Console.WriteLine("Your letter grade is: F");
+                    difference = 60 - grade;
+                    Console.WriteLine("You are " + difference + " point(s) away from a passing grade!");
                 }
 
             }
